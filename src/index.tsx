@@ -5,7 +5,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      endpoint="http://demo.chanvinxiao.com/hotel/"
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );

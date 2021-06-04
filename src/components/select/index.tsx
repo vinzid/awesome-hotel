@@ -12,10 +12,19 @@ const Select: React.FC<SelectProps> = props => {
   
   return (
     <div>
-        <label>Select Currency: </label>
-        <select defaultValue={currency} onChange={changeCurrency}>
+        <label htmlFor="currency">Select Currency: </label>
+        <select
+          defaultValue={currency}
+          onChange={changeCurrency}
+          id="currency"
+        >
           {Object.keys(currencies).map((v: any) => (
-            <option key={v} value={v}>{currencies[v as (keyof typeof currencies)].name}</option>
+            <option
+              key={v}
+              value={v}
+            >
+              {currencies[v as (keyof typeof currencies)].name}
+            </option>
           ))}
         </select>
     </div>

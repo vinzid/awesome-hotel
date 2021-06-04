@@ -9,7 +9,7 @@ const Competitors: React.FC<CompetitorsType> = props => {
   const { competitors } = props;
 
   return competitors ? (
-    <table>
+    <table role="group">
       <thead>
         <tr>
           <th>Platform</th>
@@ -19,7 +19,7 @@ const Competitors: React.FC<CompetitorsType> = props => {
       </thead>
       <tbody>
         {competitors.map((w: any) => (
-          <tr key={w.name}>
+          <tr key={w.name} role="row">
             <td>{w.name}</td>
             <td>{w.price.formatted}</td>
             <td>{w.saving}</td>

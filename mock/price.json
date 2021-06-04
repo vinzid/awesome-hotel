@@ -1,0 +1,8 @@
+{
+  "value": 100,
+  "formatted": "$100",
+  "taxes_and_fees": {
+    "tax": "$17.5",
+    "hotel_fees": "$22.5"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Competitors 1",
+    "price": {
+      "value": 150,
+      "formatted": "$150"
+    },
+    "saving": "50%"
+  },
+  {
+    "name": "Competitors 2",
+    "price": {
+      "value": 130,
+      "formatted": "$130"
+    },
+    "saving": "30%"
+  },
+  {
+    "name": "Us",
+    "price": {
+      "value": 120,
+      "formatted": "$100"
+    },
+    "saving": "-"
+  }
+]

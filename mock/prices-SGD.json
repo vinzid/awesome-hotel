@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "price": 160,
+    "competitors": {
+      "Competitors 1": 190,
+      "Competitors 2": 180
+    },
+    "taxes_and_fees": {
+      "tax": 11.25,
+      "hotel_fees": 15.5
+    }
+  },
+  {
+    "id": 2,
+    "price": 200,
+    "competitors": {
+      "Competitors 1": 220,
+      "Competitors 2": 210,
+      "Competitors 3": 190
+    },
+    "taxes_and_fees": {
+      "tax": 7.25,
+      "hotel_fees": 5.5
+    }
+  },
+  {
+    "id": 5,
+    "price": 160,
+    "competitors": {
+      "Competitors 1": 190,
+      "Competitors 2": 170,
+      "Competitors 3": 160,
+      "Competitors 4": 150,
+      "Competitors 5": 140
+    },
+    "taxes_and_fees": {
+      "tax": 17.5,
+      "hotel_fees": 22.5
+    }
+  },
+  {
+    "id": 6,
+    "price": 180,
+    "taxes_and_fees": {
+      "tax": 13.75,
+      "hotel_fees": 12.5
+    }
+  }
+]

@@ -11,7 +11,7 @@ const Hotel: React.FC<HotelProps> = props => {
   const { hotel } = props;
 
   return (
-    <li key={hotel.id}>
+    <li key={hotel.id} role="article">
       <dl>
         <dt>
           <img src={hotel.photo} alt={hotel.name} />

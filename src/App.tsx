@@ -2,9 +2,13 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import Select from './components/select';
 import Hotel from './components/hotel';
 import * as TYPE from './type.d';
-const endpoint = 'http://demo.chanvinxiao.com/hotel/';
 
-const App: React.FC = () => {
+export type AppProps = {
+  endpoint: string;
+}
+
+const App: React.FC<AppProps> = props => {
+  const { endpoint } = props;
   const [hotels, setHotels] = useState<TYPE.Hotel[]>([]);
   const [loadHotels, setLoadHotels] = useState<boolean>(false);
   const [errorHotels, setErrorHotels] = useState<boolean>(false);
@@ -64,7 +68,8 @@ const App: React.FC = () => {
       })
       .finally(() => {
         setLoadHotels(false);
-      })
+      });
+  // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -76,7 +81,8 @@ const App: React.FC = () => {
         setErrorPrices(true);
       }).finally(() => {
         setLoadPrices(false);
-      })
+      });
+  // eslint-disable-next-line
   }, [currency]);
 
   useEffect(() => {
@@ -116,7 +122,7 @@ const App: React.FC = () => {
                   saving: competitors[w] > price ? `${Math.round(100 * 100 * (competitors[w] - price) / competitors[w]) / 100}%` : '-'
                 });
               });
-              hotel.competitors.sort((v: any, w: any) => w.price.value - v.price.value);
+              hotel.competitors.sort((v, w) => w.price.value - v.price.value);
             }
           }
           return hotel;
@@ -143,6 +149,7 @@ const App: React.FC = () => {
       <ol>
         {hotelsPrices.map(v => (
           <Hotel
+            key={v.id}
             hotel={v}
           />
         ))}

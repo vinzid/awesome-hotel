@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "name": "Dummy Name",
+  "rating": 8,
+  "stars": 3,
+  "address": "Dummy Address",
+  "photo": "",
+  "description": "<p>Dummy Description</p>",
+  "price": {
+    "value": 100,
+    "formatted": "$100",
+    "taxes_and_fees": {
+      "tax": "$17.5",
+      "hotel_fees": "$22.5"
+    }
+  }
+}
