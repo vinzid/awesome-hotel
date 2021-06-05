@@ -1,0 +1,42 @@
+.competitors {
+  border-collapse: collapse;
+  text-align: center;
+  caption {
+    font-weight: bold;
+    white-space: nowrap;
+    padding-bottom: 5px;
+  }
+  tr {
+    td,
+    th {
+      border: 1px solid #ddd;
+      padding: 0 10px;
+      line-height: 20px;
+      font-size: 14px;
+    }
+    &:hover {
+      td,
+      th {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+  .us {
+    td {
+      background-color: #eaeaea;
+    }
+    &:hover {
+      td {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+  .dear {
+    td {
+      text-decoration: line-through;
+      &:last-child {
+        text-decoration: none;
+      }
+    }
+  }
+}

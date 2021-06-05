@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import Select from './components/select';
 import Hotel from './components/hotel';
 import * as TYPE from './type.d';
+import styles from './App.module.scss';
 
 export type AppProps = {
   endpoint: string;
@@ -122,7 +123,7 @@ const App: React.FC<AppProps> = props => {
                   saving: competitors[w] > price ? `${Math.round(100 * 100 * (competitors[w] - price) / competitors[w]) / 100}%` : '-'
                 });
               });
-              hotel.competitors.sort((v, w) => w.price.value - v.price.value);
+              hotel.competitors.sort((v, w) => v.price.value - w.price.value);
             }
           }
           return hotel;
@@ -137,15 +138,17 @@ const App: React.FC<AppProps> = props => {
   }, [hotels, prices]);
 
   return (
-    <div>
-      <h1>Awesome Hotel</h1>
-      <Select
-        currencies={currencies}
-        currency={currency}
-        changeCurrency={changeCurrency}
-      />
-      {loadHotels || loadPrices ? <div>loading...</div> : null}
-      {errorHotels || errorPrices ? <div>Request {`${errorHotels ? 'Hotels' : ''}${errorHotels && errorPrices ? ' and ' : ''}${errorPrices ? 'Prices' : ''}`} Error</div> : null}
+    <div className={styles.awesome}>
+      <header>
+        <h1>Awesome Hotel</h1>
+        <Select
+          currencies={currencies}
+          currency={currency}
+          changeCurrency={changeCurrency}
+        />
+      </header>
+      {loadHotels || loadPrices ? <div className={styles.loading}>loading...</div> : null}
+      {errorHotels || errorPrices ? <div className={styles.error}>Request {`${errorHotels ? 'Hotels' : ''}${errorHotels && errorPrices ? ' and ' : ''}${errorPrices ? 'Prices' : ''}`} Error</div> : null}
       <ol>
         {hotelsPrices.map(v => (
           <Hotel

@@ -1,5 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import * as TYPE from '../../type.d';
+import styles from './index.module.scss';
 
 export type SelectProps = {
   currencies: TYPE.Currencies;
@@ -11,7 +12,7 @@ const Select: React.FC<SelectProps> = props => {
   const {currencies, currency, changeCurrency} = props;
   
   return (
-    <div>
+    <div className={styles.selectCurrency}>
         <label htmlFor="currency">Select Currency: </label>
         <select
           defaultValue={currency}

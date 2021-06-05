@@ -29,14 +29,16 @@ export type FormattedPrice = {
   };
 };
 
-export type Competitors = {
+export type Competitor = {
   name: string;
   price: {
     value: number;
     formatted: string;
   };
   saving: string;
-}[]
+};
+
+export type Competitors = Competitor[]
 
 export type HotelPrice = Hotel & {
   price?: FormattedPrice

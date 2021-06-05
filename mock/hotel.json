@@ -5,7 +5,7 @@
   "stars": 3,
   "address": "Dummy Address",
   "photo": "",
-  "description": "<p>Dummy Description</p>",
+  "description": "<p>Dummy brief description</p> <br> <p>Dummy extra description</p>",
   "price": {
     "value": 100,
     "formatted": "$100",
