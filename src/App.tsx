@@ -59,6 +59,7 @@ const App: React.FC<AppProps> = props => {
     return currencies[currency].symbol + round(price).toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
   };
 
+  // Fetch hotels data to initiate
   useEffect(() => {
     setLoadHotels(true);
     setErrorHotels(false);
@@ -73,6 +74,7 @@ const App: React.FC<AppProps> = props => {
   // eslint-disable-next-line
   }, []);
 
+  // Fetch prices data in the beginning or when currency changed
   useEffect(() => {
     setLoadPrices(true);
     setErrorPrices(false);
@@ -86,6 +88,7 @@ const App: React.FC<AppProps> = props => {
   // eslint-disable-next-line
   }, [currency]);
 
+  // Combine data of hotels and prices together when one changed
   useEffect(() => {
     if(hotels.length > 0) {
       if(prices.length > 0){

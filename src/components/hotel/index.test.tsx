@@ -18,11 +18,14 @@ test('Renders Hotel', () => {
 
   const more = screen.getByText(/Read More/i);
   expect(more).toBeInTheDocument();
+  // The brief description in the first paragraph is shown at first
   const brief = screen.getByText(/brief description/i);
   expect(brief).toBeInTheDocument();
+  // The extra description in the second paragraph is absent at first
   let extra = screen.queryByText(/extra description/i);
   expect(extra).toBeNull();
   fireEvent.click(more);
+  // The second paragraph is shown after click Read More
   extra = screen.getByText(/extra description/i);
   expect(extra).toBeInTheDocument();
 });

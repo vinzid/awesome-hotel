@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+## Awesome Hotel
+Use [React](react) to develop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Software
+Necessary software and the version used in development
+- [Node](node) v14.17.0
+- [yarn](yarn) v1.22.10
 
-In the project directory, you can run:
+### Install
+Install the dependency
+>yarn
 
-### `yarn start`
+### Run
+Compile and start
+>yarn start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Test
+Test for the app
+>yarn test
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Access
+Visit via browser
+>http://localhost:3000
 
-### `yarn test`
+### Functionality
+The main functionality of this app is as follow:
+1. Display the basic information of hotels, with or without the price, and the hotels without price will be displayed lastly.
+2. The price make includes tax and hotel fees, which will indicated by the asterisk besides the price, and the details will shown when hover.
+3. The competitors table may be available, and are ordered by ascending price, with the saving with us percentage if the price is higher than us.
+4. If the description is more than a paragraph, only the first paragraph will be shown at first, with the "Read More" link to show all, then "Read Less" link to shrink.
+5. Default currency is U.S. Dollar or the last selected currency, a different currency can be switched by selecting a dropdown option.
+6. If there're errors when request data, error message will be shown. If the prices request failure for the first time, the hotel list will be shown without any price.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[react]: https://reactjs.org
+[node]: https://nodejs.org
+[yarn]: https://yarnpkg.com

@@ -1,6 +1,8 @@
 .price {
-  cursor: pointer;
   position: relative;
+  &.has {
+    cursor: pointer;
+  }
   .emphasize {
     color: #600000;
   }
